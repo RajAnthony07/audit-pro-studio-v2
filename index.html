@@ -206,7 +206,7 @@ var data=hidden.toDataURL("image/png");
 var a=document.createElement("a"); a.href=data; a.download="Certificate-"+lastReport.host+"-"+lastReport.grade+"-"+lastReport.totalScore+"-DigitalRajMedia.png"; document.body.appendChild(a); a.click(); a.remove();
 },150);
 }
-function isLic(s){ s=(s||"").trim().toUpperCase(); if(!s) return false; return s.startsWith("STUDIO-V2-ULTRA-"); }
+function isLic(s){ s=(s||"").trim().toUpperCase(); if(!s) return false; return s.startsWith("STUDIO-V2-ULTRA-") || s.startsWith("AP-V2-") || s.startsWith("AP-V1-") || s.startsWith("AUDIT-PRO-"); }
 function doLic(){
 var err=document.getElementById("err"); err.textContent="";
 var v=document.getElementById("licInput").value.trim().toUpperCase();
